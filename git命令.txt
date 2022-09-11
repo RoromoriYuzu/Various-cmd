@@ -1,0 +1,29 @@
+git init	给一个文件初始化，使其可以由git进行版本管理（会创建一个./git的隐藏文件）
+git stauts	查看Git仓库状态,查看是否有文件处于暂存区
+git add 文件	将文件保存到暂存区，文件正式属于Git仓库的管理对象
+git commit -m "注释"	将当前暂存区中的文件实际保存到仓库的历史记录中
+如果不加-m "注释"，就会启动编辑器，
+git log		查看仓库以往提交的日志
+git log --pretty=short	简洁显示，只显示第一行
+git log README.md	只查看该文件的日志
+git log -p	查看提交所带来的改动
+git log -p	README.md
+git diff	查看更改前后的差别，在未git add之前的修改，如果git add了，怎么查看不到了
+git diff HEAD	可以在git add之后查看修改的差别，不过在git commit之后也无法查看
+
+git branch	查看分支列表
+git checkout -b feature-A	创建feature-A，并切换到feature-A
+等同于执行两条命令：创建git branch feature-A		切换git checkout feature-A
+git checkout -	切换到上一个使用的分支
+git merge --no-ff feature-A		在master分支下执行此命令，将feature-A合并到master
+git log --graph		以图表方式查看分支，可以清楚的看到分支的合并
+
+git rest --hard 哈希值（只需前4位）	回溯历史版本
+git reflog		gitlog命令只能查看以当前状态为终点的历史日志,所以这里要使用git reflog命令
+
+
+
+git push	将修改上传到GitHub
+
+将git的编辑器改为notepad++
+git config --local core.editor "'D:/software2/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
