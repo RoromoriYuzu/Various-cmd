@@ -20,8 +20,19 @@ git log --graph		以图表方式查看分支，可以清楚的看到分支的合
 
 git rest --hard 哈希值（只需前4位）	回溯历史版本
 git reflog		gitlog命令只能查看以当前状态为终点的历史日志,所以这里要使用git reflog命令
+git commit --amend	修改上一条命令提交的信息
+git commit -am "注释"	相当与git add 文件 和git commit
+git rebase -i HEAD~2	将包括HEAD（最新提交）在内的两个最新历史记录合并，可以用来消除因第一次错
+误进行第二次修改后留下的痕迹，执行该命令会打开一个文本，将第二行的pick改为fixup保存退出
 
+git remote add origin git@github.com:fuguangChor/git-tutorial.git	为远程GitHub仓库设置一个origin的别名
+git push -u origin master	将本地仓库的内容推送给别名为origin的远程仓库的master分支
+当前命令行位于什么分支，就是将上面分支推送出去
 
+git clone git@github.com:github-book/git-tutorial.git	将远程仓库的master分支下载到本地
+git branch -a	git branch -a命令查看当前分支的相关信息。添加-a参数可以同时显示本地仓库和远程仓库的分支信息
+git checkout -b feature-D origin/feature-D	将 feature-D 分支获取至本地仓库
+git pull	获取最新的远程仓库分支
 
 git push	将修改上传到GitHub
 
