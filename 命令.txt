@@ -1,1 +1,0 @@
-.\xray_windows_amd64_protected.exe webscan --listen 127.0.0.1:7777 --html-output xray-testphp.html
